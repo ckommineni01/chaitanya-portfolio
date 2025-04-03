@@ -1,0 +1,100 @@
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #0e0e0e;
+  color: #eee;
+  scroll-behavior: smooth;
+}
+header {
+  padding: 5rem 1rem;
+  text-align: center;
+  background: #111;
+}
+.header-content h1 {
+  font-size: 2.5rem;
+}
+.highlight {
+  color: #00ccff;
+}
+.typing {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+.social-icons a {
+  margin: 0 10px;
+  color: #00ccff;
+  font-size: 1.5rem;
+}
+.resume-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #00ccff;
+  color: black;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navbar {
+  position: sticky;
+  top: 0;
+  background: #1f1f1f;
+  padding: 0.8rem 0;
+  z-index: 1000;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+.navbar a {
+  color: #00ccff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.section {
+  padding: 3rem 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+.project-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.project-card {
+  background: #1c1c1c;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+.project-card img {
+  width: 100%;
+  border-radius: 6px;
+}
+.project-card a {
+  color: #00ccff;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #777;
+  background: #1a1a1a;
+}
+
+
+.profile-pic {
+  margin-top: 1rem;
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #00ccff;
+}
