@@ -5,6 +5,32 @@ body {
   background-color: #111;
   color: #eee;
   line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #1f1f1f;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid #333;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.navbar a {
+  color: #00ccff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 header {
@@ -58,10 +84,48 @@ ul li {
   font-weight: bold;
 }
 
+.project {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.project img {
+  width: 150px;
+  height: auto;
+  border-radius: 5px;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
   background-color: #1f1f1f;
   color: #888;
   margin-top: 2rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .project {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project img {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  header .profile-pic {
+    width: 120px;
+    height: 120px;
+  }
 }
