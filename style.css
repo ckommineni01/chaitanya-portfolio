@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,30 +6,48 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
 }
+
 .navbar {
   background-color: #111;
   padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
+  overflow-x: auto;
 }
+
 .navbar ul {
   list-style: none;
   display: flex;
   justify-content: center;
   gap: 2rem;
   padding: 0;
+  margin: 0;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
 }
+
+.navbar ul::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.navbar li {
+  flex: 0 0 auto;
+}
+
 .navbar a {
   color: #FFD700;
   text-decoration: none;
   font-weight: bold;
 }
+
 header {
   text-align: center;
   padding: 2rem 1rem;
   background-color: #111;
 }
+
 .profile-pic {
   width: 140px;
   height: 140px;
@@ -39,29 +56,35 @@ header {
   border: 3px solid #FFD700;
   margin-top: 1rem;
 }
+
 h1, h2 {
   color: #FFD700;
 }
+
 .section {
   padding: 2rem 1rem;
   max-width: 900px;
   margin: auto;
 }
+
 .project-grid {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+
 .project-card {
   background: #111;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
 }
+
 .project-card img {
   width: 100%;
   border-radius: 6px;
 }
+
 .resume-btn {
   background: #FFD700;
   color: #000;
@@ -72,29 +95,48 @@ h1, h2 {
   display: inline-block;
   margin-top: 1rem;
 }
+
 .social-icons a {
   color: #FFD700;
   font-size: 1.5rem;
   margin: 0 10px;
 }
+
 .badge img {
   max-width: 300px;
   margin-top: 1rem;
 }
+
 .edu-entry {
   display: flex;
   align-items: center;
   margin-bottom: 1.5rem;
   gap: 1rem;
 }
+
 .edu-logo {
   width: 60px;
   height: auto;
   border-radius: 8px;
 }
+
 footer {
   text-align: center;
   padding: 1.5rem;
   color: #aaa;
   background: #111;
+}
+
+/* ✅ Mobile responsiveness for navbar scroll */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .navbar li {
+    flex: 0 0 auto;
+  }
 }
