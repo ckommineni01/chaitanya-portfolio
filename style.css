@@ -15,7 +15,6 @@ body {
   top: 0;
   z-index: 1000;
   overflow-x: auto;
-  white-space: nowrap;
 }
 
 .navbar-scroll {
@@ -24,16 +23,17 @@ body {
 }
 
 .navbar ul {
-  list-style: none;
-  display: inline-flex;
+  display: flex;
+  flex-wrap: nowrap;
   gap: 2rem;
   padding: 0 1rem;
   margin: 0;
+  list-style: none;
   white-space: nowrap;
 }
 
 .navbar li {
-  display: inline-block;
+  flex-shrink: 0;
 }
 
 .navbar a {
@@ -41,7 +41,9 @@ body {
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem;
+  display: inline-block;
 }
+
 
 /* Rest of your styles */
 header {
