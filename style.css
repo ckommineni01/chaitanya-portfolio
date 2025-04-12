@@ -8,32 +8,26 @@ body {
 }
 
 /* ✅ Scrollable Navbar */
+/* Base navbar style for desktop */
 .navbar {
   background-color: #111;
   padding: 1rem 0;
   position: sticky;
   top: 0;
   z-index: 1000;
-  overflow-x: auto;
-}
-
-.navbar-scroll {
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .navbar ul {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 2rem;
-  padding: 0 1rem;
-  margin: 0;
   list-style: none;
-  white-space: nowrap;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar li {
-  flex-shrink: 0;
+  display: inline-block;
 }
 
 .navbar a {
@@ -41,7 +35,17 @@ body {
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem;
-  display: inline-block;
+}
+
+/* ✅ Make navbar scrollable only on small screens */
+@media (max-width: 768px) {
+  .navbar ul {
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 1rem;
+  }
 }
 
 
