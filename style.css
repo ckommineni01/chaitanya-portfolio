@@ -121,12 +121,13 @@ h1, h2 {
   margin: 0 10px;
 }
 
-/* Achievements Section */
+/* ✅ Achievements Section - Updated */
 .achievement-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  justify-items: center;
+  align-items: start;
 }
 
 .badge {
